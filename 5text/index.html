@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='//code.jquery.com/jquery-1.7.2.min.js'></script>
+    <script src='//localhost:3000/socket.io/socket.io.js'></script>
+    <title></title>
+    <style>
+    @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 1800;
+}
+
+body {
+  background: url(xhttp://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52c36f7657cc3_1.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  background: url(xhttp://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52cf9489095e8_1.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+  text-align: center;
+  font-size: 12em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: url(http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52c36f7657cc3_1.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+    </style>
+</head>
+
+<body>
+    <script>
+    // var socket = io.connect('//localhost:3000');
+
+    // socket.on('welcome', function(data) {
+    //     $('#messages').append('<li>' + data.message + '</li>');
+
+    //     socket.emit('i am client', {
+    //         data: 'foo!'
+    //     });
+    // });
+    // socket.on('tweet', function(data) {
+    //     console.log(data);
+    //     $('#tweet').text(data.message);
+    // });
+    // socket.on('error', function() {
+    //     console.error(arguments)
+    // });
+    // socket.on('message', function() {
+    //     console.log(arguments)
+    // });
+       var items = [
+            "complex",
+            "Collaborative",
+            "Anti-schedule",
+            "dynamic",
+            "different",
+            "Transparentcy",
+            "automated ",
+            "innovation",
+            "Piecemeal",
+            "collaboration",
+            "complicated",
+            "less",
+            "selfpreneurs",
+            "insecure",
+            "on-demand",
+            "Risky",
+            "virtual online assistant",
+            "LIMITLESS",
+            "Exclusive",
+            "Flexible",
+            "unpredictable",
+            "Innovative",
+            "disparity",
+            "Computery",
+            "Modular",
+            "flexible",
+            "convoluted",
+            "uncertain",
+            "lifestyle",
+            "exciting",
+            "Agism",
+            "Hustle",
+            "challenging",
+            "Transparent",
+            "independence",
+            "Transformative",
+            "globalization",
+            "Flexible",
+            "boundless",
+            "universal",
+            "Innovation",
+            "entrepreneurial",
+            "Growth",
+            "Mobility",
+            "selfemployment",
+            "collaborative",
+            "Difficult",
+            "Ambitious",
+            "transformative",
+            "opportunity",
+            "Liberating!",
+            "Mobile",
+            "adapting",
+            "Collaborate",
+            "Independent ",
+            "challenge",
+            "independent",
+            "Flexible",
+            "interesting",
+            "Growth",
+            "uncertain",
+            "Co-inspiring",
+            "disruptive",
+            "Innovative",
+            "Unknown",
+            "Clash",
+            "mobile",
+            "self-sufficiency",
+            "challenging",
+            "innovative ",
+            "Remote",
+            "liberating ",
+            "Groundbreaking.",
+            "awesome!",
+            "malleable",
+            "difficult",
+            "Streaming",
+            "change",
+            "change",
+            "Contingent",
+            "transformative",
+            "flexible",
+            "sustainable",
+            "engagement",
+            "unpredictable",
+            "flexible ",
+            "antidisestablishmentarianist",
+            "dystopian?",
+            "Freelance",
+            "regressive",
+            "Evolving ",
+            "Flux",
+            "fast",
+            "it",
+            "Evolutionism",
+            "Less",
+            "AWESOME",
+            "scary",
+            "Connected",
+            "dedication",
+            "Confusing ",
+            "competitive",
+            "Virtual",
+            "Creative",
+            "global",
+            "Evolved",
+            "supreme",
+            "unshackled",
+            "chaotic",
+            "Capricious",
+            "Liberating",
+            "Liberating ",
+            "Uncertainty",
+            "Flexibility",
+            "Unknown",
+            "Flexible ",
+            "unknown",
+            "shifting",
+            "Grounbreaking",
+            "flexible",
+            "iterative",
+            "Flexible",
+            "goblins",
+            "Flexibility",
+            "transformed",
+            "Transformative",
+            "Limitless",
+            "independent",
+            "Uncertain",
+            "ever-evolving ",
+            "changing",
+            "ever-changing",
+            "Constant",
+            "Evolving",
+            "Demands",
+            "Complex",
+            "design",
+            "Fluid",
+            "Self",
+            "automated",
+            "Exciting and scary",
+            "Solutions",
+            "Remote",
+            "Freedom",
+            "Augmented",
+            "moveable",
+            "Unsustainable",
+            "Creative ",
+            "AlwaysOn",
+            "Flexible",
+            "time management",
+            "Excellent",
+            "Barter",
+            "flexible",
+            "Freelance",
+            "Work!",
+            "fluid",
+            "collaboration",
+            "soloentrepreneurs",
+            "Changing",
+            "unstable",
+            "flexible",
+            "sad",
+            "dynamic",
+            "contracted",
+            "Freelance Video Editor",
+            "Flexibility ",
+            "scary",
+            "Creative",
+            "projectized",
+            "fierce",
+            "mobile",
+            "Creative",
+            "contracting",
+            "Flexible",
+            "flexible",
+            "Dynamic",
+            "revolutionary",
+            "Entrepreneurship",
+            "challenging ",
+            "mobile ",
+            "Eminent",
+            "Personal",
+            "Banker",
+            "Hope",
+            "on-demand",
+            "Challenging ",
+            "fluxy",
+            "Purpose",
+            "Hollow",
+            "multi-platform",
+            "independent",
+            "different",
+            "individualistic"
+        ];
+        function randVar() {
+        var data = items[Math.floor(Math.random()*items.length)];
+        $('#tweet').text(data);
+        }
+        setInterval(randVar, 5000);
+    </script>
+    <div class="container">
+  <p id='tweet'>Some Text</p>
+</div>
+</body>
+
+</html>
