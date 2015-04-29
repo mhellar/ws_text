@@ -23,28 +23,28 @@
     <script>
      
     var data;
-    // var socket = io.connect('//localhost:3000');
+    var socket = io.connect('//localhost:3000');
 
-    // socket.on('welcome', function(data) {
-    //     $('#messages').append('<li>' + data.message + '</li>');
+    socket.on('welcome', function(data) {
+        $('#messages').append('<li>' + data.message + '</li>');
 
-    //     socket.emit('i am client', {
-    //         data: 'foo!'
-    //     });
-    // });
-    // socket.on('tweet', function(data) {
-    //         console.log(data);
-    //         data = data.message;
-    //         //console.log(data);
-    //         // clock();
-    //     });
-    // socket.on('error', function() {
-    //     console.error(arguments)
-    // });
-    // socket.on('message', function() {
-    //     console.log(arguments);
+        socket.emit('i am client', {
+            data: 'foo!'
+        });
+    });
+    socket.on('tweet', function(data) {
+            console.log(data);
+            data = data.message;
+            //console.log(data);
+            // clock();
+        });
+    socket.on('error', function() {
+        console.error(arguments)
+    });
+    socket.on('message', function() {
+        console.log(arguments);
 
-    // });
+    });
             var items = [
             "complex",
             "Collaborative",
@@ -77,33 +77,6 @@
             "lifestyle",
             "exciting",
             "Agism",
-            "Hustle",
-            "challenging",
-            "Transparent",
-            "independence",
-            "Transformative",
-            "globalization",
-            "Flexible",
-            "boundless",
-            "universal",
-            "Innovation",
-            "entrepreneurial",
-            "Growth",
-            "Mobility",
-            "selfemployment",
-            "collaborative",
-            "Difficult",
-            "Ambitious",
-            "transformative",
-            "opportunity",
-            "Liberating!",
-            "Mobile",
-            "adapting",
-            "Collaborate",
-            "Independent ",
-            "challenge",
-            "independent",
-            "Flexible",
             "interesting",
             "Growth",
             "uncertain",
